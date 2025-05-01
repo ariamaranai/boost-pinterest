@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "boost-pinterest",
+  "version": "0",
+  "description": "boost pinterest.com",
+  "icons": {
+    "128": "128.png"
+  },
+  "content_scripts": [{
+    "js": ["main.js"],
+    "matches": ["https://*.pinterest.com/*"],
+    "world": "MAIN",
+    "run_at": "document_start"
+  }]
+}
