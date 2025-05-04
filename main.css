@@ -1,0 +1,19 @@
+::-webkit-scrollbar {
+  display: none
+}
+:root {
+  background-color: #111;
+  color: #eee;
+  --color-background-box-default: #111 !important;
+  --color-background-button-white-hover: #111 !important;
+  --color-text-default: #eee !important
+}
+#HeaderContent {
+  left: 0 !important
+}
+#VerticalNavContent {
+  display: none
+}
+.appContent {
+  margin-left: -72px
+}

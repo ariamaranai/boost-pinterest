@@ -38,9 +38,9 @@ Object.prototype.hasOwnProperty.call = (a, b) => {
     case "fetchpriority":
     case "loop":
     case "onError":
-    case "opacity":
     case "onTouchEnd":
     case "onTouchStart":
+    case "opacity":
       return 0;
     default:
       // typeof b == "string" && b.length > 2 && (kkk[b] ? ++kkk[b] : kkk[b] = 1);
