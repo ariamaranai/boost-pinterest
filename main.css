@@ -5,7 +5,9 @@
   background-color: #111;
   color: #eee;
   --color-background-box-default: #111 !important;
-  --color-background-button-white-hover: #111 !important;
+  --color-background-button-secondary-default: #555 !important;
+  --color-background-button-secondary-hover: #444 !important;
+  --color-background-button-white-hover: #444 !important;
   --color-text-default: #eee !important
 }
 #HeaderContent {
