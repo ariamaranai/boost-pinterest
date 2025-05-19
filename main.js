@@ -1,3 +1,45 @@
+Element.prototype.addEventListener = function (a, b, c) {
+  switch (a) {
+    case "animationend":
+    case "auxclick":
+    case "contextmenu":
+    case "cut":
+    case "dblclick":
+    case "drag":
+    case "dragend":
+    case "dragenter":
+    case "dragexit":
+    case "dragleave":
+    case "dragover":
+    case "dragstart":
+    case "drop":
+    case "encrypted":
+    case "error":
+    case "gotpointercapture":
+    case "invalid":
+    case "lostpointercapture":
+    case "pointercancel":
+    case "pointerdown":
+    case "pointermove":
+    case "pointerout":
+    case "pointerover":
+    case "pointerup":
+    case "securitypolicyviolation":
+    case "stalled":
+    case "test":
+    case "touchcancel":
+    case "touchend":
+    case "touchmove":
+    case "touchstart":
+    case "volumechange":
+    case "webkitAnimationEnd":
+    case "webkitAnimationIteration":
+    case "webkitAnimationStart":
+      return 0;
+    default:
+      return EventTarget.prototype.addEventListener.call(this, a, b, c);
+  }
+}
 {
   // var z = {};
   let has = (a, b) => {
@@ -40,10 +82,10 @@
       case "borderTop":
       case "boxShadow":
       case "color":
-      case "data-test-id":
       case "data-test-image-signature":
       case "data-test-pin-id":
       case "data-test-pin-slot-index":
+      case "data-testid":
       case "dataTestId":
       case "disabled":
       // case "direction":
@@ -62,14 +104,18 @@
       case "onDragOver":
       case "onDragStart":
       case "onDrop":
+      case "onEncrypted":
       case "onError":
       case "onInvalid":
+      case "onStalled":
       case "onTouchCancel":
       case "onTouchEnd":
       case "onTouchMove":
       case "onTouchStart":
       case "onVolumeChange":
       case "opacity":
+      case "savedGradient":
+      case "role":
       case "tabIndex":
       case "textDirectionality":
       case "theme":
@@ -79,7 +125,7 @@
       case "twist":
         return 0;
       default:
-        // typeof b == "string" && b.length > 2 && (z[b] ? ++z[b] : z[b] = 1);
+        // b && typeof b == "string" && b.length > 2 && (z[b] ??= 0, ++z[b]);
         return b in a;
     }
   }
