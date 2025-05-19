@@ -74,6 +74,8 @@ Element.prototype.addEventListener = function (a, b, c) {
       case "ariaOwneeID":
       case "ariaProps":
       case "autoCapitalize":
+      case "autoComplete":
+      case "autoCorrect":
       case "backgroundColor":
       case "borderColor":
       case "borderRadius":
@@ -82,10 +84,12 @@ Element.prototype.addEventListener = function (a, b, c) {
       case "borderTop":
       case "boxShadow":
       case "color":
+      // case "dangerouslySetInlineStyle":
+      // case "dangerouslySetInnerHTML":
       case "data-test-image-signature":
       case "data-test-pin-id":
       case "data-test-pin-slot-index":
-      case "data-testid":
+      case "data-test-id":
       case "dataTestId":
       case "disabled":
       // case "direction":
