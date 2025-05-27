@@ -40,6 +40,48 @@ Element.prototype.addEventListener = function (a, b, c) {
       return EventTarget.prototype.addEventListener.call(this, a, b, c);
   }
 }
+Element.prototype.removeEventListener = function (a, b, c) {
+  switch (a) {
+    case "animationend":
+    case "auxclick":
+    case "contextmenu":
+    case "cut":
+    case "dblclick":
+    case "drag":
+    case "dragend":
+    case "dragenter":
+    case "dragexit":
+    case "dragleave":
+    case "dragover":
+    case "dragstart":
+    case "drop":
+    case "encrypted":
+    case "error":
+    case "gotpointercapture":
+    case "invalid":
+    case "lostpointercapture":
+    case "pointercancel":
+    case "pointerdown":
+    case "pointermove":
+    case "pointerout":
+    case "pointerover":
+    case "pointerup":
+    case "securitypolicyviolation":
+    case "stalled":
+    case "test":
+    case "touchcancel":
+    case "touchend":
+    case "touchmove":
+    case "touchstart":
+    case "volumechange":
+    case "webkitAnimationEnd":
+    case "webkitAnimationIteration":
+    case "webkitAnimationStart":
+      return 0;
+    default:
+      return EventTarget.prototype.removeEventListener.call(this, a, b, c);
+  }
+}
 {
   // var z = {};
   let has = (a, b) => {
@@ -84,6 +126,10 @@ Element.prototype.addEventListener = function (a, b, c) {
       case "autoComplete":
       case "autoCorrect":
       case "backgroundColor":
+      case "backgroundImage":
+      case "backgroundPosition":
+      case "backgroundRepeat":
+      case "backgroundSize":
       case "borderColor":
       case "borderRadius":
       case "borderRight":
