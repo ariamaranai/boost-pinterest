@@ -44,7 +44,14 @@ Element.prototype.addEventListener = function (a, b, c) {
   // var z = {};
   let has = (a, b) => {
     switch (b) {
+      case "WebkitAnimation":
+      case "WebkitLineClamp":
+      case "WebkitMaskImage":
+      case "WebkitTransform":
+      case "WebkitUserSelect":
+      case "accessibilityID":
       case "alt":
+      case "altKey":
       case "animation":
       case "animationDelay":
       case "animationName":
@@ -84,23 +91,32 @@ Element.prototype.addEventListener = function (a, b, c) {
       case "borderTop":
       case "boxShadow":
       case "color":
+      case "crossOrigin":
       // case "dangerouslySetInlineStyle":
       // case "dangerouslySetInnerHTML":
       case "data-test-image-signature":
       case "data-test-pin-id":
       case "data-test-pin-slot-index":
       case "data-test-id":
+      case "data-testid":
       case "dataTestId":
+      case "decoding":
       case "disabled":
       // case "direction":
       case "fetchPriority":
       case "fetchpriority":
       case "isDragWithinBounds":
+      case "loading":
       case "loop":
+      case "metaKey":
+      case "movementX":
+      case "movementY":
       case "onAnimationIteration":
       case "onAnimationEnd":
       case "onAnimationStart":
       case "onContextMenu":
+      case "onCopy":
+      case "onCut":
       case "onDoubleClick":
       case "onDragEnd":
       case "onDragEnter":
@@ -111,6 +127,7 @@ Element.prototype.addEventListener = function (a, b, c) {
       case "onEncrypted":
       case "onError":
       case "onInvalid":
+      case "onPaste":
       case "onStalled":
       case "onTouchCancel":
       case "onTouchEnd":
@@ -118,9 +135,14 @@ Element.prototype.addEventListener = function (a, b, c) {
       case "onTouchStart":
       case "onVolumeChange":
       case "opacity":
+      case "playsInline":
+      case "rounding":
       case "savedGradient":
+      case "touchAction":
       case "role":
+      case "spellCheck":
       case "tabIndex":
+      case "textDecoration":
       case "textDirectionality":
       case "theme":
       case "tiltX":
