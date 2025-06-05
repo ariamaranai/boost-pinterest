@@ -2,6 +2,9 @@ Element.prototype.addEventListener = function (a, b, c) {
   switch (a) {
     case "animationend":
     case "auxclick":
+    case "compositionend":
+    case "compositionstart":
+    case "compositionupdate":
     case "contextmenu":
     case "cut":
     case "dblclick":
@@ -137,6 +140,7 @@ Element.prototype.removeEventListener = function (a, b, c) {
       case "borderTop":
       case "boxShadow":
       case "color":
+      case "contentEditable":
       case "crossOrigin":
       // case "dangerouslySetInlineStyle":
       // case "dangerouslySetInnerHTML":
@@ -160,6 +164,9 @@ Element.prototype.removeEventListener = function (a, b, c) {
       case "onAnimationIteration":
       case "onAnimationEnd":
       case "onAnimationStart":
+      case "onCompositionEnd":
+      case "onCompositionStart":
+      case "onCompositionUpdate":
       case "onContextMenu":
       case "onCopy":
       case "onCut":
@@ -187,6 +194,7 @@ Element.prototype.removeEventListener = function (a, b, c) {
       case "touchAction":
       case "role":
       case "spellCheck":
+      case "suppressContentEditableWarning":
       case "tabIndex":
       case "textDecoration":
       case "textDirectionality":

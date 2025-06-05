@@ -8,10 +8,18 @@
   --color-background-button-secondary-default: #555 !important;
   --color-background-button-secondary-hover: #444 !important;
   --color-background-button-white-hover: #444 !important;
-  --color-text-default: #eee !important
+  --color-text-default: #eee !important;
+  --color-text-subtle: #eee !important
+}
+:any-link {
+  display: contents !important;
+  color: #99f !important
 }
 #HeaderContent {
   left: 0 !important
+}
+#SuggestionsMenu {
+  background-color: #111
 }
 #VerticalNavContent {
   display: none
