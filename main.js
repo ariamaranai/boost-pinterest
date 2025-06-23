@@ -155,6 +155,7 @@ Element.prototype.removeEventListener = function (a, b, c) {
       // case "direction":
       case "fetchPriority":
       case "fetchpriority":
+      case "handleNewBoardAnimationCompletion":
       case "isDragWithinBounds":
       case "loading":
       case "loop":
@@ -193,6 +194,7 @@ Element.prototype.removeEventListener = function (a, b, c) {
       case "savedGradient":
       case "touchAction":
       case "role":
+      case "shiftKey":
       case "spellCheck":
       case "suppressContentEditableWarning":
       case "tabIndex":
